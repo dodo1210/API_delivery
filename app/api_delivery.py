@@ -3,7 +3,6 @@ my_application_bp = Blueprint('my_application',__name__)
 
 @my_application_bp.route('/payload', methods=['POST'])
 def payload():
-	v = Validacao()
 	size = request.json['dimensao']
 	if request.json['peso'] <= 0:
 		return jsonify([])
